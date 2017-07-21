@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=D:\git_project\kotlin_demo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar
+FILE_HASH=bf2c85cb05672706a416e743562da184e1993e66
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true
