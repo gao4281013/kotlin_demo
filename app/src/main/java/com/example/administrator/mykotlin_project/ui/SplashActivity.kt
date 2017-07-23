@@ -27,26 +27,22 @@ class SplashActivity : AppCompatActivity() {
 
     private fun setAnimation() {
 
-        val valueAnimator = ObjectAnimator.ofFloat(iv_icon_splash,"alpha",0f,1f);
+        val valueAnimator = ObjectAnimator.ofFloat(iv_icon_splash,"alpha",0f,1f,0f);
         valueAnimator.setDuration(1000);
         valueAnimator.start()
         valueAnimator.addListener(object:Animator.AnimatorListener{
             override fun onAnimationStart(animation: Animator?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onAnimationEnd(animation: Animator?) {
                 newIntent<MainActivity>()
                 finish()
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onAnimationRepeat(animation: Animator?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onAnimationCancel(animation: Animator?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         })
 
