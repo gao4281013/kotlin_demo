@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.mykotlin_project.ui.MainReaActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:id="@+id/tv_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/icon_search"
+                android:id="@+id/iv_search"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rg_root"
+        android:id="@+id/fl_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content"/>
+
+
+    <View
+        android:layout_above="@+id/rg_root"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_root"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/home_bg_selected"
+            android:gravity="center"
+            android:text="@string/home_tab_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_find"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/find_bg_selected"
+            android:gravity="center"
+            android:text="@string/find_tab_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_hot"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/hot_bg_selected"
+            android:gravity="center"
+            android:text="@string/hot_tab_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/mine_bg_selected"
+            android:gravity="center"
+            android:text="@string/my_tab_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </RadioGroup>
+
+</RelativeLayout>

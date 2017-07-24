@@ -27,8 +27,8 @@ class SplashActivity : AppCompatActivity() {
 
     private fun setAnimation() {
 
-        val valueAnimator = ObjectAnimator.ofFloat(iv_icon_splash,"alpha",0f,1f,0f);
-        valueAnimator.setDuration(1000);
+        val valueAnimator = ObjectAnimator.ofFloat(iv_icon_splash,"alpha",0f,1f);
+        valueAnimator.setDuration(2000);
         valueAnimator.start()
         valueAnimator.addListener(object:Animator.AnimatorListener{
             override fun onAnimationStart(animation: Animator?) {
