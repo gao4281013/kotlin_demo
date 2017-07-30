@@ -25,4 +25,6 @@ class FindFragment : BaseFragment() {
         return R.layout.fragment_find
     }
 
+    override fun initView() {
+    }
 }

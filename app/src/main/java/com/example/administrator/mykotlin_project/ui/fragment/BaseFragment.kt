@@ -28,7 +28,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView();
+        initView()
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
@@ -61,6 +61,6 @@ abstract class BaseFragment : Fragment() {
 
     abstract fun getLayoutResources(): Int
 
-    private fun initView() {}
+    abstract fun initView()
 
 }

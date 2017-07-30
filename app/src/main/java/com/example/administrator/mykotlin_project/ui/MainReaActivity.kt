@@ -28,8 +28,8 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_rea)
         ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init();
-        setRedioButton();
-        initToolBar();
+        setRedioButton()
+        initToolBar()
         initFragment(savedInstanceState)
     }
 
@@ -63,6 +63,7 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
             fragemntTrans.add(R.id.fl_content, findFragment)
             fragemntTrans.add(R.id.fl_content, hotFragment)
             fragemntTrans.add(R.id.fl_content, myFragment)
+            fragemntTrans.commit()
 
         }
         supportFragmentManager.beginTransaction().show(homeFragment)
@@ -76,7 +77,7 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
     private fun initToolBar() {
         var today = getToday()
         tv_bar_title.text = today
-        tv_bar_title.typeface = Typeface.createFromAsset(this.assets, "font/Lobster-1.4.otf")
+        tv_bar_title.typeface = Typeface.createFromAsset(this.assets, "fonts/Lobster-1.4.otf")
         iv_search.setOnClickListener {
             if (rb_my.isChecked) {
 
@@ -128,9 +129,9 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
             R.id.rb_hot -> {
                 rb_hot.isChecked = true;
                 rb_hot.setTextColor(resources.getColor(R.color.black))
-                supportFragmentManager.beginTransaction().show(findFragment)
+                supportFragmentManager.beginTransaction().show(hotFragment)
                         .hide(homeFragment)
-                        .hide(hotFragment)
+                        .hide(findFragment)
                         .hide(myFragment)
                         .commit()
                 tv_bar_title.setText(getString(R.string.hot))
@@ -141,8 +142,8 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
             R.id.rb_home -> {
                 rb_home.isChecked = true;
                 rb_home.setTextColor(resources.getColor(R.color.black))
-                supportFragmentManager.beginTransaction().show(findFragment)
-                        .hide(homeFragment)
+                supportFragmentManager.beginTransaction().show(homeFragment)
+                        .hide(findFragment)
                         .hide(hotFragment)
                         .hide(myFragment)
                         .commit()
@@ -154,8 +155,8 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
             R.id.rb_my -> {
                 rb_my.isChecked = true;
                 rb_my.setTextColor(resources.getColor(R.color.black))
-                supportFragmentManager.beginTransaction().show(findFragment)
-                        .hide(homeFragment)
+                supportFragmentManager.beginTransaction().show(myFragment)
+                        .hide(findFragment)
                         .hide(hotFragment)
                         .hide(myFragment)
                         .commit()

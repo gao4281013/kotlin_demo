@@ -9,5 +9,6 @@ class HotFragment : BaseFragment() {
        return R.layout.fragment_hot
     }
 
-
+    override fun initView() {
+    }
 }
