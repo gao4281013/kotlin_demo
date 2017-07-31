@@ -35,7 +35,7 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onAnimationEnd(animation: Animator?) {
-                newIntent<MainActivity>()
+                newIntent<MainReaActivity>()
                 finish()
             }
 

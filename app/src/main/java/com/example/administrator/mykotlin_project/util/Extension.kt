@@ -5,6 +5,10 @@ import android.content.Context
 import android.content.Intent
 import android.view.Gravity
 import android.widget.Toast
+import io.reactivex.Observable
+import io.reactivex.Scheduler
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 /**
  * Created by Administrator on 2017/7/23 0023.
@@ -22,5 +26,13 @@ fun Context.showToast(message:String):Toast{
     toast.setGravity(Gravity.CENTER,0,0)
     toast.show()
     return toast
+
+}
+
+fun <T> Observable<T>.applyScheduler():Observable<T>{
+    return subscribeOn(Schedulers.io())
+            .unsubscribeOn(Schedulers.io()).
+            observeOn(AndroidSchedulers.mainThread())
+
 
 }

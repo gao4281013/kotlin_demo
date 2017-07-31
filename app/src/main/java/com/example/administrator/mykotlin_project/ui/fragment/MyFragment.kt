@@ -9,4 +9,6 @@ class MyFragment : BaseFragment() {
       return  R.layout.fragment_my
     }
 
+    override fun initView() {
+    }
 }
