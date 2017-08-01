@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import com.example.administrator.mykotlin_project.R
-import com.example.administrator.mykotlin_project.R.layout.fragment_home
 import com.example.administrator.mykotlin_project.adapter.HomeAdapter
 import com.example.administrator.mykotlin_project.mvp.contract.HomeContract
 import com.example.administrator.mykotlin_project.mvp.model.HomeBean
