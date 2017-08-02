@@ -1,18 +1,11 @@
 package com.example.administrator.mykotlin_project.ui.fragment
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.adapter.FindAdapter
 import com.example.administrator.mykotlin_project.mvp.contract.FindContract
-import com.example.administrator.mykotlin_project.mvp.model.FindBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
 import com.example.administrator.mykotlin_project.mvp.persenter.FindPresenter
 import kotlinx.android.synthetic.main.fragment_find.*
 

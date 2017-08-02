@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
-import com.example.administrator.mykotlin_project.mvp.model.FindBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
 import com.example.administrator.mykotlin_project.util.ImageLoadUtil
 
 /**

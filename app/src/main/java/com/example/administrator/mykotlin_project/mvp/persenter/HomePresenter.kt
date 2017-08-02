@@ -2,7 +2,7 @@ package com.example.administrator.mykotlin_project.mvp.persenter
 
 import android.content.Context
 import com.example.administrator.mykotlin_project.mvp.contract.HomeContract
-import com.example.administrator.mykotlin_project.mvp.model.HomeBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
 import com.example.administrator.mykotlin_project.mvp.model.HomeModel
 import com.example.administrator.mykotlin_project.util.applyScheduler
 import io.reactivex.Observable

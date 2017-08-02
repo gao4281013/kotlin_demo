@@ -1,8 +1,8 @@
 package com.example.administrator.mykotlin_project.network
 
-import com.example.administrator.mykotlin_project.mvp.model.FindBean
-import com.example.administrator.mykotlin_project.mvp.model.HomeBean
-import com.example.administrator.mykotlin_project.mvp.model.HotBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query

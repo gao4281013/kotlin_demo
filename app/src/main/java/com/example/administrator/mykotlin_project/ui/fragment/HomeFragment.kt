@@ -8,7 +8,7 @@ import android.util.Log
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.adapter.HomeAdapter
 import com.example.administrator.mykotlin_project.mvp.contract.HomeContract
-import com.example.administrator.mykotlin_project.mvp.model.HomeBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
 import com.example.administrator.mykotlin_project.mvp.persenter.HomePresenter
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.regex.Pattern

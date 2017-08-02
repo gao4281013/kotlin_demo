@@ -1,6 +1,7 @@
 package com.example.administrator.mykotlin_project.mvp.model
 
 import android.content.Context
+import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
 import com.example.administrator.mykotlin_project.network.ApiService
 import com.example.administrator.mykotlin_project.network.RetrofitClient
 import io.reactivex.Observable

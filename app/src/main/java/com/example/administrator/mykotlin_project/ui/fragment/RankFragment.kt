@@ -5,7 +5,7 @@ import android.util.Log
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.adapter.RankAdapter
 import com.example.administrator.mykotlin_project.mvp.contract.HotContract
-import com.example.administrator.mykotlin_project.mvp.model.HotBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import com.example.administrator.mykotlin_project.mvp.persenter.HotPresenter
 import kotlinx.android.synthetic.main.rank_fragment_layout.*
 

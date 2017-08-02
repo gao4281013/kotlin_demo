@@ -1,8 +1,8 @@
 package com.example.administrator.mykotlin_project.mvp.model
 
-import android.content.ClipData
 import android.content.Context
 import android.util.Log
+import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
 import com.example.administrator.mykotlin_project.network.ApiService
 import com.example.administrator.mykotlin_project.network.RetrofitClient
 import io.reactivex.Observable

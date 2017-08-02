@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
-import com.example.administrator.mykotlin_project.mvp.model.HomeBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
 import com.example.administrator.mykotlin_project.util.ImageLoadUtil
 
 

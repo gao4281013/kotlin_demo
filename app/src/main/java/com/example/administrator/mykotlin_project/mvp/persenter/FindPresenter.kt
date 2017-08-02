@@ -2,7 +2,7 @@ package com.example.administrator.mykotlin_project.mvp.persenter
 
 import android.content.Context
 import com.example.administrator.mykotlin_project.mvp.contract.FindContract
-import com.example.administrator.mykotlin_project.mvp.model.FindBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
 import com.example.administrator.mykotlin_project.mvp.model.FindModel
 import com.example.administrator.mykotlin_project.util.applyScheduler
 import io.reactivex.Observable

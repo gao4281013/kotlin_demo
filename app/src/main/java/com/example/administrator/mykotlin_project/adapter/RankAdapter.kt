@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
-import com.example.administrator.mykotlin_project.mvp.model.HotBean
+import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import com.example.administrator.mykotlin_project.ui.VideoDetailActivity
 import com.example.administrator.mykotlin_project.util.ImageLoadUtil
 

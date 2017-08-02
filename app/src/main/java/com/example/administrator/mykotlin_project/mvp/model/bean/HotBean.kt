@@ -1,4 +1,4 @@
-package com.example.administrator.mykotlin_project.mvp.model
+package com.example.administrator.mykotlin_project.mvp.model.bean
 
 /**
  * Created by Administrator on 2017/8/1 0001.
@@ -100,6 +100,15 @@ data class HotBean(var count: Int,
                             var name: String?,
                             var actionUrl: String?,
                             var adTrack: Any?)
+
+
+
+
+
+
+
+
+
         }
     }
 }
