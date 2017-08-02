@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.util.ImageLoadUtil
+import com.example.administrator.mykotlin_project.utils.SPUtils
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import kotlinx.android.synthetic.main.activity_video_detail.*
@@ -81,6 +82,22 @@ class VideoDetailActivity : AppCompatActivity(){
         tv_video_share.text = bean.share.toString()
         tv_video_reply.text = bean.share.toString()
         tv_video_download.setOnClickListener {
+            //点击下载
+            var url = bean.playUrl?.let {
+                it1 ->SPUtils.getInstance(this,"downloads").getString(it1) }
+              if (url.equals("")){
+                  var count = SPUtils.getInstance(this,"downloads").getInt("count")
+                  if (count!=-1){
+                      count = count.inc()
+                  }else{
+                      count = 1
+                  }
+
+                  SPUtils.getInstance(this,"downloads").put("count",count)
+
+
+
+              }
 
 
         }
