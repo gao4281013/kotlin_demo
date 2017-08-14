@@ -2,16 +2,13 @@ package com.example.administrator.mykotlin_project.ui
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
-import com.example.administrator.mykotlin_project.MainActivity
 import com.example.administrator.mykotlin_project.R
-import com.example.administrator.mykotlin_project.util.newIntent
+import com.example.administrator.mykotlin_project.utils.newIntent
 import kotlinx.android.synthetic.main.activity_splash.*
-import java.util.*
 
 class SplashActivity : AppCompatActivity() {
 

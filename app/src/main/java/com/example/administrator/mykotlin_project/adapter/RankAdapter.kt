@@ -12,7 +12,7 @@ import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import com.example.administrator.mykotlin_project.ui.VideoDetailActivity
-import com.example.administrator.mykotlin_project.util.ImageLoadUtil
+import com.example.administrator.mykotlin_project.utils.ImageLoadUtil
 
 /**
  * Created by Administrator on 2017/8/2.

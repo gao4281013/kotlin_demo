@@ -1,7 +1,9 @@
 package com.example.administrator.mykotlin_project.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Typeface
+import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +12,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.mvp.model.bean.HomeBean
-import com.example.administrator.mykotlin_project.util.ImageLoadUtil
+import com.example.administrator.mykotlin_project.ui.VideoDetailActivity
+import com.example.administrator.mykotlin_project.utils.ImageLoadUtil
+import com.example.administrator.mykotlin_project.utils.ObjectSaveUtil
+import com.example.administrator.mykotlin_project.utils.SPUtils
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 
 
 /**
@@ -59,8 +65,35 @@ class HomeAdapter(context: Context, list:MutableList<HomeBean.IssueList.ItemList
             holder?.iv_user?.visibility= View.GONE
         }
 
-
-
+        holder?.itemView?.setOnClickListener {
+            //跳转视频详情页
+            var intent:Intent = Intent(context,VideoDetailActivity::class.java)
+            var desc = bean?.data?.description
+            var duration = bean?.data?.duration
+            var playUrl = bean?.data?.playUrl
+            var blurred = bean?.data?.cover?.blurred
+            var collect = bean?.data?.consumption?.collectionCount
+            var share = bean?.data?.consumption?.shareCount
+            var reply = bean?.data?.consumption?.replyCount
+            var time = System.currentTimeMillis()
+            var videoBean = VideoBean(photo,title,desc,duration,playUrl,category,blurred,collect,share,reply,time)
+            var url = SPUtils.getInstance(context!!,"beans").getString(playUrl!!)
+            if (url.equals("")){
+                var count = SPUtils.getInstance(context!!,"beans").getInt("count")
+                if (count!=-1){
+                    count = count.inc()
+                }else{
+                    count = 1
+                }
+                SPUtils.getInstance(context!!,"beans").put("count",count)
+                SPUtils.getInstance(context!!,"beans").put(playUrl!!,playUrl)
+                ObjectSaveUtil.saveObject(context!!,"bean$count",videoBean)
+            }
+            intent.putExtra("data",videoBean as Parcelable)
+            context?.let {
+                context -> context.startActivity(intent)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): HomeViewHolder {

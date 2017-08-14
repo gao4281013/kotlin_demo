@@ -9,9 +9,9 @@ import android.net.NetworkInfo
  */
 object NetworkUtils {
 
-    fun isNetConnected(context: Context):Boolean{
-        val connectManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networdInfo:NetworkInfo?=connectManager.activeNetworkInfo
+    fun isNetConnected(context: android.content.Context):Boolean{
+        val connectManager = context.getSystemService(android.content.Context.CONNECTIVITY_SERVICE) as android.net.ConnectivityManager
+        val networdInfo: android.net.NetworkInfo?=connectManager.activeNetworkInfo
         if (networdInfo==null){
             return false
         }else{
@@ -19,12 +19,12 @@ object NetworkUtils {
         }
     }
 
-    fun isNetWorkConnected(context: Context,typeMobile:Int):Boolean{
-        if (isNetConnected(context)){
+    fun isNetWorkConnected(context: android.content.Context, typeMobile:Int):Boolean{
+        if (com.example.administrator.mykotlin_project.utils.NetworkUtils.isNetConnected(context)){
             return false
         }
-        val connectManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkInfo:NetworkInfo = connectManager.activeNetworkInfo
+        val connectManager = context.getSystemService(android.content.Context.CONNECTIVITY_SERVICE) as android.net.ConnectivityManager
+        val networkInfo: android.net.NetworkInfo = connectManager.activeNetworkInfo
         if (networkInfo==null){
             return false
         }else{
@@ -32,13 +32,13 @@ object NetworkUtils {
         }
     }
 
-    fun isPhoneNetConnect(context: Context):Boolean{
-        val typeMobile = ConnectivityManager.TYPE_MOBILE
-        return isNetWorkConnected(context,typeMobile)
+    fun isPhoneNetConnect(context: android.content.Context):Boolean{
+        val typeMobile = android.net.ConnectivityManager.TYPE_MOBILE
+        return com.example.administrator.mykotlin_project.utils.NetworkUtils.isNetWorkConnected(context, typeMobile)
     }
 
-    fun isWifiNetConnected(context: Context):Boolean{
-        val typeWifi = ConnectivityManager.TYPE_WIFI
-        return isNetWorkConnected(context,typeWifi)
+    fun isWifiNetConnected(context: android.content.Context):Boolean{
+        val typeWifi = android.net.ConnectivityManager.TYPE_WIFI
+        return com.example.administrator.mykotlin_project.utils.NetworkUtils.isNetWorkConnected(context, typeWifi)
     }
 }

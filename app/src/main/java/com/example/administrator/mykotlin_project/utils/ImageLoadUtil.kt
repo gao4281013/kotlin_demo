@@ -1,4 +1,4 @@
-package com.example.administrator.mykotlin_project.util
+package com.example.administrator.mykotlin_project.utils
 
 import android.content.Context
 import android.widget.ImageView
@@ -12,7 +12,7 @@ import com.example.administrator.mykotlin_project.R
  */
 class ImageLoadUtil {
     companion object{
-        fun display(context: Context,imageView: ImageView?,url:String){
+        fun display(context: Context, imageView: ImageView?, url:String){
             if (imageView==null){
                 throw IllegalAccessException("arguement error")
             }
@@ -25,7 +25,7 @@ class ImageLoadUtil {
 
         }
 
-        fun displayHigh(context: Context,imageView: ImageView?,url:String){
+        fun displayHigh(context: Context, imageView: ImageView?, url:String){
             if (imageView==null){
                 throw IllegalAccessException("arguement error")
             }

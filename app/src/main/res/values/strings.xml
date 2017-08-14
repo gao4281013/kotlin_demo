@@ -16,4 +16,6 @@
     <string name="my_fragment">Mine</string>
     <string name="hot">hot</string>
     <string name="exit_one_more_time">再按一次退出程序</string>
+    <string name="start_download">开始下载</string>
+    <string name="add_mission_fail">添加任务失败</string>
 </resources>

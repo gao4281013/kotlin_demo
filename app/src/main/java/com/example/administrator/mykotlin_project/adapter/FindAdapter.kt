@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
-import com.example.administrator.mykotlin_project.util.ImageLoadUtil
+import com.example.administrator.mykotlin_project.utils.ImageLoadUtil
 
 /**
  * Created by Administrator on 2017/8/1 0001.

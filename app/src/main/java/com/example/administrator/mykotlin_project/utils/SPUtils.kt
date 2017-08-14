@@ -7,11 +7,11 @@ import java.util.*
 /**
  * Created by Administrator on 2017/8/2 0002.
  */
-class SPUtils private constructor(context: Context,spName:String){
-    private val sp:SharedPreferences
+class SPUtils private constructor(context: android.content.Context, spName:String){
+    private val sp: android.content.SharedPreferences
 
     init {
-        sp = context.getSharedPreferences(spName,Context.MODE_PRIVATE)
+        sp = context.getSharedPreferences(spName, android.content.Context.MODE_PRIVATE)
     }
 
     /**
@@ -149,7 +149,7 @@ class SPUtils private constructor(context: Context,spName:String){
      * *
      * @return 存在返回对应值，不存在返回默认值`defaultValue`
      */
-    @JvmOverloads fun getStringSet(key: String, defaultValue: Set<String> = Collections.emptySet()): Set<String> {
+    @JvmOverloads fun getStringSet(key: String, defaultValue: Set<String> = java.util.Collections.emptySet()): Set<String> {
         return sp.getStringSet(key, defaultValue)
     }
 
@@ -192,7 +192,7 @@ class SPUtils private constructor(context: Context,spName:String){
 
     companion object {
 
-        private val sSPMap = HashMap<String,SPUtils>()
+        private val sSPMap = java.util.HashMap<String, SPUtils>()
 
         /**
          * 获取SP实例
@@ -201,13 +201,13 @@ class SPUtils private constructor(context: Context,spName:String){
          * *
          * @return [SPUtils]
          */
-        fun getInstance(context: Context,spName: String): SPUtils {
+        fun getInstance(context: android.content.Context, spName: String): com.example.administrator.mykotlin_project.utils.SPUtils {
             var spName = spName
-            if (isSpace(spName)) spName = "spUtils"
-            var sp: SPUtils? = sSPMap[spName]
+            if (com.example.administrator.mykotlin_project.utils.SPUtils.Companion.isSpace(spName)) spName = "spUtils"
+            var sp: com.example.administrator.mykotlin_project.utils.SPUtils? = com.example.administrator.mykotlin_project.utils.SPUtils.Companion.sSPMap[spName]
             if (sp == null) {
-                sp = SPUtils(context,spName)
-                sSPMap.put(spName, sp)
+                sp = com.example.administrator.mykotlin_project.utils.SPUtils(context, spName)
+                com.example.administrator.mykotlin_project.utils.SPUtils.Companion.sSPMap.put(spName, sp)
             }
             return sp
         }

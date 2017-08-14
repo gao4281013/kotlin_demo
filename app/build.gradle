@@ -56,4 +56,7 @@ dependencies {
 
     compile 'com.shuyu:GSYVideoPlayer:1.6.8'
 
+    //rxdownload
+    compile 'zlc.season:rxdownload2:2.0.4'
+
 }

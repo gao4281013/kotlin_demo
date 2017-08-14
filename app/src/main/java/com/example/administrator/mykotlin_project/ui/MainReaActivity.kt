@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.Toast
 import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.ui.fragment.*
-import com.example.administrator.mykotlin_project.util.showToast
+import com.example.administrator.mykotlin_project.utils.showToast
 import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main_rea.*
 import java.util.*

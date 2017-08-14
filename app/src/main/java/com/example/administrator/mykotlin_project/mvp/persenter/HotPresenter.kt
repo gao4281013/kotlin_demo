@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.administrator.mykotlin_project.mvp.contract.HotContract
 import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import com.example.administrator.mykotlin_project.mvp.model.HotModel
-import com.example.administrator.mykotlin_project.util.applyScheduler
+import com.example.administrator.mykotlin_project.utils.applyScheduler
 import io.reactivex.Observable
 
 /**
