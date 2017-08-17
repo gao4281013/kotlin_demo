@@ -1,5 +1,6 @@
 package com.example.administrator.mykotlin_project.ui.fragment
 
+import android.content.Intent
 import android.support.v4.app.Fragment
 
 import com.example.administrator.mykotlin_project.R
@@ -7,6 +8,7 @@ import com.example.administrator.mykotlin_project.adapter.FindAdapter
 import com.example.administrator.mykotlin_project.mvp.contract.FindContract
 import com.example.administrator.mykotlin_project.mvp.model.bean.FindBean
 import com.example.administrator.mykotlin_project.mvp.persenter.FindPresenter
+import com.example.administrator.mykotlin_project.ui.FindDetailActivity
 import kotlinx.android.synthetic.main.fragment_find.*
 
 /**
@@ -35,6 +37,9 @@ class FindFragment : BaseFragment(),FindContract.View {
         gv_find.setOnItemClickListener{ parent, view, position, id ->
             var bean = mList?.get(position)
             var name = bean?.name
+            var intent:Intent = Intent(context,FindDetailActivity::class.java)
+            intent.putExtra("name",name)
+            startActivity(intent)
 
         }
 

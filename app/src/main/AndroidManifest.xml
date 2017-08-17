@@ -30,6 +30,7 @@
         </activity>
         <activity android:name=".ui.MainReaActivity"></activity>
         <activity android:name=".ui.VideoDetailActivity"/>
+        <activity android:name=".ui.FindDetailActivity"/>
     </application>
 
 </manifest>

@@ -33,4 +33,16 @@ interface ApiService {
     @GET("v3/ranklist")
     fun getHotData(@Query("num") num: Int, @Query("strategy") strategy:String,
                    @Query("udid") udid:String, @Query("vc") vc:Int):Observable<HotBean>
+
+
+    //获取发现频道详细信息
+    @GET("v3/videos")
+    fun getFindDetailData(@Query("categoryName") categoryName:String,@Query("strategy") strategy: String,
+                          @Query("udid") udid: String,@Query("vc") vc: Int):Observable<HotBean>
+
+
+    //获取发现频道加载更多详细信息
+    @GET("v3/videos")
+    fun getFindDetailMoreData(@Query("start") start:Int,@Query("num") num: Int,
+                          @Query("categoryName") categoryName: String,@Query("strategy") strategy: String):Observable<HotBean>
 }
