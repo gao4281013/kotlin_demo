@@ -3,6 +3,7 @@ package com.example.administrator.mykotlin_project.adapter
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,9 @@ import com.example.administrator.mykotlin_project.R
 import com.example.administrator.mykotlin_project.mvp.model.bean.HotBean
 import com.example.administrator.mykotlin_project.ui.VideoDetailActivity
 import com.example.administrator.mykotlin_project.utils.ImageLoadUtil
+import com.example.administrator.mykotlin_project.utils.ObjectSaveUtil
+import com.example.administrator.mykotlin_project.utils.SPUtils
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 
 /**
  * Created by Administrator on 2017/8/2.
@@ -68,6 +72,21 @@ class RankAdapter(context: Context,list:ArrayList<HotBean.ItemList.Data>):Recycl
             var share = list?.get(position)?.consumption?.shareCount
             var reply = list?.get(position)?.consumption?.replyCount
             var time = System.currentTimeMillis()
+            var videoBean = VideoBean(photoUrl,title,desc,duration,playUrl,category,blurred,collect,share,reply,time)
+            var url = SPUtils.getInstance(context!!,"beans").getString(playUrl!!)
+            if (url.equals("")){
+                var count = SPUtils.getInstance(context!!,"beans").getInt("count")
+                if (count!=-1){
+                    count = count.inc()
+                }else{
+                    count =1
+                }
+                SPUtils.getInstance(context!!,"beans").put("count",count)
+                SPUtils.getInstance(context!!,"beans").put(playUrl!!,playUrl)
+                ObjectSaveUtil.saveObject(context!!,"bean$count",videoBean)
+            }
+            intent.putExtra("data",videoBean as Parcelable)
+            context?.let { context -> context.startActivity(intent) }
         }
     }
 

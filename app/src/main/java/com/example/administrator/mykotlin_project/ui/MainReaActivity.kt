@@ -8,6 +8,8 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
 import com.example.administrator.mykotlin_project.R
+import com.example.administrator.mykotlin_project.search.SEARCH_TAG
+import com.example.administrator.mykotlin_project.search.SearchFragment
 import com.example.administrator.mykotlin_project.ui.fragment.*
 import com.example.administrator.mykotlin_project.utils.showToast
 import com.gyf.barlibrary.ImmersionBar
@@ -158,14 +160,12 @@ class MainReaActivity : AppCompatActivity(), View.OnClickListener {
                 supportFragmentManager.beginTransaction().show(myFragment)
                         .hide(findFragment)
                         .hide(hotFragment)
-                        .hide(myFragment)
+                        .hide(homeFragment)
                         .commit()
                 tv_bar_title.setText(getString(R.string.my_fragment))
                 tv_bar_title.visibility = View.GONE
-                iv_search.setImageResource(R.mipmap.icon_search)
+                iv_search.setImageResource(R.mipmap.icon_setting)
             }
-
-
         }
     }
 
